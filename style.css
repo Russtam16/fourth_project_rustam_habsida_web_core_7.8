@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'TTLakes';
+  src: url('./fonts/TTLakes-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'TTLakes', Arial, sans-serif;
+  background-color: #e5e5e5;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  z-index: 1000;
+  box-shadow: 15px 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.menu-btn--pink {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff3e79;
+}
+
+.menu-btn:hover {
+  opacity: 0.85 ;
+  transform: scale(1.10);
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mobile-menu__nav {
+  flex-grow: 1;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-menu__item {
+  position: relative;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b1c21;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.mobile-menu__link:hover {
+  color: #ff3e79;
+}
+
+.mobile-menu__item--active .mobile-menu__link {
+  color: #7e7e82;
+}
+
+.mobile-menu__item--active::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background-color: #41f6d7;
+  border-radius: 0 4px 4px 0;
+}
+
+.mobile-menu__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.mobile-menu__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.mobile-menu__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-menu__email {
+  font-size: 14px;
+  color: #1b1c21;
+}
+
+.mobile-menu__phone {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1b1c21;
+}
+
+.mobile-menu__lang {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1b1c21;
+}
+
+.lang-option {
+  cursor: pointer;
+}
+
+.lang-option--active {
+  color: #7e7e82;
+}
